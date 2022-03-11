@@ -10,9 +10,7 @@ export const CountDownParent=()=>{
         nb:(nb),
         onDone:(timer)=>{
           if (timer === 0){
-            setNb(nb++);
-            console.log(JSON.stringify(CountDownElement));
-            return;
+            setNb(nb+1);
           }
         }
       }
