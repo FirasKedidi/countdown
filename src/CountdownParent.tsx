@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import { CountDownComponent } from './countdown';
+import { CountDownComponent } from './CountdownComponent';
 import { CountDownProps } from './interfaces';
 
 
 
 export const CountDownParent=()=>{
-    let [nb,setNb] = useState(0)
+    const [nb,setNb] = useState(0)
     let CountDownElement:CountDownProps={
         nb:(nb),
         onDone:(timer)=>{
