@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { CountDownProps } from "./interfaces";
 
 export const CountDownComponent = (props:CountDownProps)=>{
@@ -7,11 +7,14 @@ export const CountDownComponent = (props:CountDownProps)=>{
     React.useEffect(() => {
         timer > 0 && setTimeout(() => setTimer(timer - 1), 1000);
       }, [timer]);
-    console.log(props)
+    useEffect(()=>{
+      setTimer(10);
+    },[props.nb])
+    
       return (
         <div className="App">
           <div>Countdown: {timer}s</div>
         </div>
       );
-    }
+}
 
