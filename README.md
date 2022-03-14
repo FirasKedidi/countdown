@@ -1,3 +1,3 @@
 # CountDown Component
-Written in react and typescript
+Written in React and Typescript using functional components and React hooks.
 
